@@ -1,6 +1,6 @@
 <?php
-
 define('THEME_URL', get_template_directory_uri());
+require_once( get_stylesheet_directory() . '/core/options.php' );
 // Load the parent theme sytlesheet
 
 function theme_enqueue_styles() {
