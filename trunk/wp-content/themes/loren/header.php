@@ -130,35 +130,10 @@
 <body>
 <div class="theme-layout">
 
-<div id="top-bar" style="display:none;">
-	<div class="container">
-		<ul>
-			<li>
-				<i class="icon-home"></i>
-				425 Street Name, UK, London
-			</li>
-			<li>
-				<i class="icon-phone"></i>
-				(123) 456-7890
-			</li>
-			<li>
-				<i class="icon-envelope"></i>
-				contact@companymail.com
-			</li>
-		</ul> 
-		<div class="search-box">
-			<input class="submit-button" type="submit" value="" >
-			<input class="search-input" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';"  value="Search">
-		</div>
-	</div>
-</div><!--top bar-->
-
-
-
 <header class="sticky">
 	<div class="container">
 		<div class="logo">
-			<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/logo.png" alt="Logo" /><h1><i>T</i>rangLoren</h1></a>
+			<a href="#" title=""><img src="<?php apply_filters( 'cuongbui_logo', THEME_URL . '/images/logo.png' ); ?>" alt="Logo" /><h1><i>T</i>rangLoren</h1></a>
 		</div><!-- Logo -->
 		<!-- <nav class="menu">
 			<ul id="menu-navigation">

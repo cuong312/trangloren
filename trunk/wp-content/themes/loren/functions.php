@@ -80,7 +80,7 @@ if ( !function_exists('cuongbui_theme_setup') ) {
 
 /* Thiet lap menu */
 
-if (!function_exists('cuongbui_menu')) {
+if (! function_exists( 'cuongbui_menu' ) ) {
 	function cuongbui_menu ($menu) {
 		$menu = array(
 			'theme_location' => $menu,
@@ -91,3 +91,21 @@ if (!function_exists('cuongbui_menu')) {
 		wp_nav_menu( $menu );
 	}
 }
+
+/* Chen logo image */
+
+if ( ! function_exists( 'cuongbui_logo' ) ) {
+
+	function cuongbui_logo() {
+
+		global $loren_options;
+
+		if ( isset( $loren_options['logo-image']['url'] ) ) {
+			echo $loren_options['logo-image']['url'];
+		} else {
+			echo THEME_URL . '/images/logo.png';
+		}
+	}
+}
+
+add_filter( 'cuongbui_logo', 'cuongbui_logo' );

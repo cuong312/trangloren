@@ -101,10 +101,128 @@ if ( ! class_exists( 'Loren_Theme_Options' ) ) {
  
 		    // Home Section
 		    $this->sections[] = array(
-		        'title'  => __( 'Header', 'thachpham' ),
-		        'desc'   => __( 'All of settings for header on this theme.', 'thachpham' ),
+		        'title'  => 'Trang chủ', 'thachpham',
+		        'desc'   => 'Tùy chỉnh hiển thị cho trang chủ',
 		        'icon'   => 'el-icon-home',
-		        'fields' => array()
+		        'fields' => array(
+		        	// Mỗi array là một field
+		        	array(
+		        		'id'		=> 'logo-on',
+		        		'type'		=> 'switch',
+		        		'title'		=> 'Kích hoạt ảnh logo',
+		        		'compiler'	=> 'bool',
+		        		'desc'		=> 'Bạn có muốn hiển thị logo ảnh.',
+		        		'on'		=> 'Kích hoạt',
+		        		'off'		=> 'Vô hiệu hóa'
+		        	),
+
+		        	array(
+		        		'id'		=> 'logo-image',
+		        		'type'		=> 'media',
+		        		'title'		=> 'Ảnh Logo',
+		        		'desc'		=> 'Chọn ảnh mà bạn muốn làm logo.',
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-about-1',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Giới thiệu 1',
+		        		'desc'		=> 'Nhập câu giới thiệu trên trang chủ.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-about-1-link',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Link giới thiệu 1',
+		        		'desc'		=> 'Chèn link cho icon giới thiệu 1.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-about-2',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Giới thiệu 2',
+		        		'desc'		=> 'Nhập câu giới thiệu trên trang chủ.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-about-2-link',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Link giới thiệu 2',
+		        		'desc'		=> 'Chèn link cho icon giới thiệu 2.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-about-3',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Giới thiệu 3',
+		        		'desc'		=> 'Nhập câu giới thiệu trên trang chủ.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-about-3-link',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Link giới thiệu 3',
+		        		'desc'		=> 'Chèn link cho icon giới thiệu 3.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-slogan-title',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Tiêu đề Slogan',
+		        		'desc'		=> 'Nhập tiêu đề slogan.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-slogan',
+		        		'type'		=> 'textarea',
+		        		'title'		=> 'Câu slogan',
+		        		'desc'		=> 'Nhập câu slogan.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-post',
+		        		'type'		=> 'text',
+		        		'title'		=> 'ID bài viết giới thiệu trên trang chủ',
+		        		'desc'		=> 'Nhập ID bài viết giới thiệu.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-post-video',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Địa chỉ URL Youtube video giới thiệu',
+		        		'desc'		=> 'Nhập địa chỉ video Youtube.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-address',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Địa chỉ',
+		        		'desc'		=> 'Nhập địa chỉ.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-phone',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Số điện thoại',
+		        		'desc'		=> 'Nhập số điện thoại.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-email',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Email',
+		        		'desc'		=> 'Nhập số địa chỉ email.'
+		        	),
+
+		        	array(
+		        		'id'		=> 'home-facebook',
+		        		'type'		=> 'text',
+		        		'title'		=> 'Địa chỉ facebook',
+		        		'desc'		=> 'Nhập link facebook.'
+		        	),
+
+
+		        ),
 		    ); // end section
 		 
 		}

@@ -304,5 +304,11 @@
 	
 </div><!-- Side Panel -->
 <?php wp_footer(); ?>
+<?php
+global $loren_options;
+echo '<pre>';
+print_r( $loren_options );
+echo '</pre>';
+?>
 </body>
 </html>
