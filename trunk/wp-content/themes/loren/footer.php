@@ -188,24 +188,7 @@
 				<div class="footer-widget-title">
 					<h4><strong><span>L</span>iên</strong> HỆ</h4>
 				</div>
-				<ul class="contact-details">
-					<li>
-						<span><i class="icon-home"></i>ĐỊA CHỈ</span>
-						<p>Tầng 3, nhà 54 Lê Thanh Nghị, Hà Nội</p>
-					</li>
-					<li>
-						<span><i class="icon-phone-sign"></i>ĐIỆN THOẠI</span>
-						<p>0962.885.249 / +00 034 965 353</p>
-					</li>
-					<li>
-						<span><i class="icon-envelope-alt"></i>EMAIL</span>
-						<p>tranglorencontact@gmail.com</p>
-					</li>
-					<li>
-						<span><i class="icon-link"></i>WEB ADDRESS</span>
-						<p>http://www.trangloren.com</p>
-					</li>
-				</ul>
+				<?php cuongbui_lienhe(); ?> 
 			</div><!-- Contact Us Widget -->
 			<div class="col-md-6">
 				<div class="footer-widget-title">

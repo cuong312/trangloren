@@ -109,3 +109,35 @@ if ( ! function_exists( 'cuongbui_logo' ) ) {
 }
 
 add_filter( 'cuongbui_logo', 'cuongbui_logo' );
+
+/* Dia chi lien he */
+
+if ( ! function_exists( 'cuongbui_lienhe' ) ) {
+	function cuongbui_lienhe() {
+		global $loren_options;
+
+		$diachi = isset($loren_options['home-address']) ? $loren_options['home-address'] : 'Tầng 4, nhà 54 Lê Thanh Nghị, Hà Nội';
+		$dienthoai = isset($loren_options['home-phone']) ? $loren_options['home-phone'] : '0962.885.249 / +00 034 965 353';
+		$email = isset($loren_options['home-email']) ? $loren_options['home-email'] : 'trangloren@gmail.com';
+		?>
+		<ul class="contact-details">
+			<li>
+				<span><i class="icon-home"></i>ĐỊA CHỈ</span>
+				<p><?php echo $diachi; ?></p>
+			</li>
+			<li>
+				<span><i class="icon-phone-sign"></i>ĐIỆN THOẠI</span>
+				<p><?php echo $dienthoai; ?></p>
+			</li>
+			<li>
+				<span><i class="icon-envelope-alt"></i>EMAIL</span>
+				<p><?php echo $dienthoai; ?></p>
+			</li>
+			<li>
+				<span><i class="icon-link"></i>WEB ADDRESS</span>
+				<p>http://www.trangloren.com</p>
+			</li>
+		</ul>
+		<?php 
+	}
+}
