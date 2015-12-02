@@ -212,3 +212,22 @@
 .message-box {
     z-index: 3;
 }
+
+.cources-box {
+    margin-bottom: 30px;
+}
+
+.staff-image {
+    width: 275px;
+    height: 270px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.student-image {
+    background-position: center center;
+    background-size: cover;
+    border-radius: 3px;
+    height: 358px;
+    width: 270px;
+}

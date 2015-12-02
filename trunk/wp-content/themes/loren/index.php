@@ -71,50 +71,9 @@
 	</a>
 </div>	
 
-
-
-<section class="home-about">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 text-center">
-				<a class="about-icon" href="">
-					<i class="fa fa-university"></i>
-				</a>
-				<div class="about-content">
-					<p>
-						Take computer science courses
-						<br>
-						with personalized support
-					</p>
-				</div>
-			</div>
-			<div class="col-sm-4 text-center">
-				<a class="about-icon" href="">
-					<i class="fa fa-users"></i>
-				</a>
-				<div class="about-content">
-					<p>
-						Take computer science courses
-						<br>
-						with personalized support
-					</p>
-				</div>
-			</div>
-			<div class="col-sm-4 text-center">
-				<a class="about-icon" href="">
-					<i class="fa fa-graduation-cap"></i>
-				</a>
-				<div class="about-content">
-					<p>
-						Take computer science courses
-						<br>
-						with personalized support
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<!-- Home About Section -->
+<?php home_about_secction(); ?> 
+<!-- End Home About Section -->
 
 <section class="home-courses">
 	<div class="container">
@@ -122,72 +81,7 @@
 			<h2 class="col-sm-12">Khóa Học</h2>
 		</div>
 	</div>
-	<div class="container">
-		<div class="staff couses">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="staff-member cources-member">
-						<img src="<?php echo THEME_URL . '/'?>images/courses_1.jpg" alt="" />
-						<div class="member-intro" style="background-color: #1eaace;">
-							<h3>Workshop pronunciation</h3>
-							<span>Level 1</span>
-						</div>
-						<div class="social-contacts">
-							<ul>
-								<li class="view-couses"><a href="#" title=""><i class="fa fa-eye"></i></a></li>
-								<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div><!--Staff Member-->
-				<div class="col-md-3">
-					<div class="staff-member cources-member">
-						<img src="<?php echo THEME_URL . '/'?>images/courses_2.jpg" alt="" />
-						<div class="member-intro" style="background-color: #1dbb90;">
-							<h3>American Accent Training</h3>
-							<span>Level 2</span>
-						</div>
-						<div class="social-contacts">
-							<ul>
-								<li class="view-couses"><a href="#" title=""><i class="fa fa-eye"></i></a></li>
-								<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div><!--Staff Member-->
-				<div class="col-md-3">
-					<div class="staff-member cources-member">
-						<img src="<?php echo THEME_URL . '/'?>images/courses_5.jpg" alt="" />
-						<div class="member-intro" style="background-color: #ffb20e;">
-							<h3>Listening and Speaking Part 1</h3>
-							<span>Level 3</span>
-						</div>
-						<div class="social-contacts">
-							<ul>
-								<li class="view-couses"><a href="#" title=""><i class="fa fa-eye"></i></a></li>
-								<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div><!--Staff Member-->
-				<div class="col-md-3">
-					<div class="staff-member cources-member">
-						<img src="<?php echo THEME_URL . '/'?>images/courses_4.jpg" alt="" />
-						<div class="member-intro" style="background-color: #428BCA;">
-							<h3>Listening and Speaking Part 2</h3>
-							<span>Level 4</span>
-						</div>
-						<div class="social-contacts">
-							<ul>
-								<li class="view-couses"><a href="#" title=""><i class="fa fa-eye"></i></a></li>
-								<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div><!--Staff Member-->
-			</div>
-		</div><!--Staff -->
-	</div>
+	<?php home_khoahoc(); ?>
 </section>
 
 <section class="home-quoute">

@@ -43,7 +43,7 @@ class WPLoren {
 
 			// Frontend
 			'has_archive'		=> false,
-			'public'			=> false,
+			'public'			=> true,
 			'publicly_queryable'=> false,
 
 			// Admin
@@ -86,9 +86,9 @@ class WPLoren {
 			),
 
 			// Frontend
-			'has_archive'		=> false,
-			'public'			=> false,
-			'publicly_queryable'=> false,
+			'has_archive'		=> true,
+			'public'			=> true,
+			'publicly_queryable'=> true,
 
 			// Admin
 			'capability_type'	=> 'post',
@@ -219,7 +219,7 @@ class WPLoren {
 
 			// Frontend
 			'has_archive'		=> false,
-			'public'			=> false,
+			'public'			=> true,
 			'publicly_queryable'=> false,
 
 			// Admin

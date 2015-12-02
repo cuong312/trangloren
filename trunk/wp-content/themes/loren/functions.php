@@ -119,6 +119,7 @@ if ( ! function_exists( 'cuongbui_lienhe' ) ) {
 		$diachi = isset($loren_options['home-address']) ? $loren_options['home-address'] : 'Tầng 4, nhà 54 Lê Thanh Nghị, Hà Nội';
 		$dienthoai = isset($loren_options['home-phone']) ? $loren_options['home-phone'] : '0962.885.249 / +00 034 965 353';
 		$email = isset($loren_options['home-email']) ? $loren_options['home-email'] : 'trangloren@gmail.com';
+		$facebook = isset($loren_options['home-facebook']) ? $loren_options['home-facebook'] : 'http:://facebook.com/trangloren';
 		?>
 		<ul class="contact-details">
 			<li>
@@ -134,10 +135,198 @@ if ( ! function_exists( 'cuongbui_lienhe' ) ) {
 				<p><?php echo $dienthoai; ?></p>
 			</li>
 			<li>
-				<span><i class="icon-link"></i>WEB ADDRESS</span>
-				<p>http://www.trangloren.com</p>
+				<span><i class="icon-link"></i>FACEBOOK</span>
+				<p><?php echo $facebook; ?></p>
 			</li>
 		</ul>
 		<?php 
 	}
+}
+
+
+/* Home About */
+if ( !function_exists( 'home_about_secction' ) ) {
+	function home_about_secction() {
+		global $loren_options;
+		$home_about_default = 'Take computer science courses
+								<br>
+								with personalized support default';
+		$home_about_1 = isset( $loren_options['home-about-1'] ) ? $loren_options['home-about-1'] : $home_about_default;
+		$home_about_2 = isset( $loren_options['home-about-2'] ) ? $loren_options['home-about-1'] : $home_about_default;
+		$home_about_3 = isset( $loren_options['home-about-3'] ) ? $loren_options['home-about-1'] : $home_about_default;
+		?>
+		<section class="home-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<a class="about-icon" href="">
+							<i class="fa fa-university"></i>
+						</a>
+						<div class="about-content">
+							<p>
+								<?php echo $home_about_1; ?> 
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<a class="about-icon" href="">
+							<i class="fa fa-users"></i>
+						</a>
+						<div class="about-content">
+							<p>
+								<?php echo $home_about_2; ?> 
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<a class="about-icon" href="">
+							<i class="fa fa-graduation-cap"></i>
+						</a>
+						<div class="about-content">
+							<p>
+								<?php echo $home_about_3; ?> 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<?php 
+	}
+}
+
+
+/* Liet ke khoa hoc */
+
+function home_khoahoc() {
+	$args = array(
+		'post_type' => 'course',
+	);
+
+	$backgroundString = 'background_color';
+	?>
+
+	<div class="container">
+		<div class="staff couses">
+			<div class="row">
+				<?php 
+				$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+				?>
+
+					<div class="col-md-3 cources-box">
+						<div class="staff-member cources-member">
+							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" alt="" />
+
+							<div class="member-intro" style="background-color: <?php echo get_post_meta( get_the_ID(), $backgroundString, true );?>;">
+								<h3><?php the_title(); ?></h3>
+								<span>Level 1</span>
+							</div>
+							<div class="social-contacts">
+								<ul>
+									<li class="view-couses"><a href="#" title=""><i class="fa fa-eye"></i></a></li>
+									<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				<?php
+					endwhile;
+				endif;
+				?> 
+				
+			</div>
+		</div><!--Staff -->
+	</div>
+	<?php 
+		
+}
+
+/* Liet ke giang vien */
+
+function teacher_list() {
+	$args = array(
+		'post_type' => 'teacher',
+	);
+	?> 
+	<div class="container">
+		<div class="staff">
+			<div class="row">
+				<?php 
+				$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+				?>
+				<div class="col-md-3">
+					<div class="staff-member">
+						<div class="staff-image" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID(), 'medium' ) ); ?>')"></div>
+						<div class="member-intro teacher-info">
+							<h3><?php the_title(); ?></h3>
+							<span><?php echo get_post_meta( get_the_ID(), 'cong_viec', true );?></span>
+						</div>
+						<div class="social-contacts">
+							<ul>
+								<li><a href="<?php echo get_post_meta( get_the_ID(), 'facebook', true );?>" title=""><img src="<?php echo THEME_URL . '/'?>images/facebook.jpg" alt="" /></a></li>
+								<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/gplus.jpg" alt="" /></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<?php
+					endwhile;
+				endif;
+				?>
+			</div>
+		</div><!--Staff -->
+	</div>
+	<?php 
+}
+
+/* Liet ke hoc vien */
+
+function student_list() {
+	$args = array(
+		'post_type' => 'student',
+	);
+	?>
+	<div class="container">	
+		<div class="causes-page">
+			<div class="row">
+				<?php 
+				$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+				?>
+				<div class="col-md-3">
+					<div class="causes-image">
+						<div class="student-image" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID(), 'medium' ) ); ?>')"></div>
+						<div class="cause-heading">
+							<h3><?php the_title(); ?></h3>
+							<p><?php echo get_post_meta( get_the_ID(), 'truong_hoc', true );?></p>
+						</div>
+						<div class="our-causes-hover">
+							<h3>Cảm nhận sau khóa học</h3>
+							<p><?php echo get_post_meta( get_the_ID(), 'cam_nhan', true );?></p>
+						</div>
+					</div>
+				</div>
+
+				<?php
+					endwhile;
+				endif;
+				?>
+
+			</div>
+		</div>
+	</div>
+	<?php 
 }
