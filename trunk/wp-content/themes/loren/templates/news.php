@@ -26,7 +26,7 @@
 				if( $the_query->have_posts() ) : while ( $the_query->have_posts() ) :  $the_query->the_post();
 			?>
 			<div class="blog-post">
-				<h2><a href="single-post-image.html" title=""><?php the_title(); ?></a></h2>
+				<h2><a href="<?php the_permalink()?>" title=""><?php the_title(); ?></a></h2>
 				<a class="blog-post-img" href="single-post-image.html" title=""><img src="<?php echo THEME_URL . '/'?>images/blog-post-ws-1.jpg" alt="" /></a>
 				<div class="blog-post-details">
 					<ul class="post-meta">
