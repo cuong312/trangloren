@@ -231,3 +231,60 @@
     height: 358px;
     width: 270px;
 }
+
+.teacher-image {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.teacher-name-title {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: 'Open Sans';
+}
+
+.teacher-job-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #1eaace;
+    font-family: 'Open Sans';
+}
+
+.tearch-info {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.teacher-contact {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.teacher-content {
+    font-size: 14px;
+    font-family: 'Open Sans';
+    text-align: justify;
+    margin-top: 30px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.post-meta > li {   
+    color: #969696;
+    font-family: roboto;
+    font-size: 11px;
+}
+
+.post-meta > li > i {   
+    padding-right: 5px;
+}
+
+.blog-post {
+    padding-bottom: 5px;
+}

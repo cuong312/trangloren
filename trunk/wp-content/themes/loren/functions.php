@@ -256,7 +256,7 @@ function teacher_list() {
 	<div class="container">
 		<div class="staff">
 			<div class="row">
-				<?php 
+				<?php
 				$the_query = new WP_Query( $args );
 
 				if ( $the_query->have_posts() ) :
@@ -266,10 +266,12 @@ function teacher_list() {
 				<div class="col-md-3">
 					<div class="staff-member">
 						<div class="staff-image" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID(), 'medium' ) ); ?>')"></div>
-						<div class="member-intro teacher-info">
-							<h3><?php the_title(); ?></h3>
-							<span><?php echo get_post_meta( get_the_ID(), 'cong_viec', true );?></span>
-						</div>
+						<a href="<?php the_permalink()?>">
+							<div class="member-intro teacher-info">
+								<h3><?php the_title(); ?></h3>
+								<span><?php echo get_post_meta( get_the_ID(), 'cong_viec', true );?></span>
+							</div>
+						</a>
 						<div class="social-contacts">
 							<ul>
 								<li><a href="<?php echo get_post_meta( get_the_ID(), 'facebook', true );?>" title=""><img src="<?php echo THEME_URL . '/'?>images/facebook.jpg" alt="" /></a></li>
