@@ -288,3 +288,28 @@
 .blog-post {
     padding-bottom: 5px;
 }
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+.alignright {float:right; }
+.alignleft {float:left; }
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+.page-title h1 {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 10px 10px 0 0;
+    color: #2d2d2d;
+    float: left;
+    font-family: "Open sans";
+    font-size: 27px;
+    font-weight: lighter;
+    line-height: 23px;
+    padding: 15px 40px;
+    position: absolute;
+    top: -122px;
+}
+
+.logo h1 {
+    color: #ffffff !important;
+}
+

@@ -43,7 +43,3 @@
 </section>
 
 <?php get_footer(); ?>
-<?php
-	echo "<pre>";
-	print_r($wp_query);
-?>

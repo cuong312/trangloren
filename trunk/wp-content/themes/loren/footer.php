@@ -1,37 +1,6 @@
 
 <section class="testimonial">
-	<div class="container">
-		<div class="slideshow">
-			<ul class="slides">
-				<li style="visibility:visible" class="slide" id="image1">
-					<div class="carusal-image-thumb">
-					<img src="<?php echo THEME_URL . '/'?>images/testimonials1.jpg" alt="thumb1" />
-					<strong>Marry Williams,</strong><span class="carusal-image-thumb-name"> CEO </span>
-					</div>
-					<p>Fusce nec arcu eget nunc scelerisque pharetra eget vel metus. Curabitur a orci et nulla gravida laoreet. Pellentesque dictum ipsum nec placerat dignissim. Vivamus porta pellentesque libero, sit amet placerat mauris iaculis non. Nullam eleifend, eros eget facilisis adipiscing, nibh mi vehicula tellus, non</p>
-				</li><!-- Messgae1 -->
-				<li class="slide" id="image2">
-					<div class="carusal-image-thumb">
-					<img src="<?php echo THEME_URL . '/'?>images/testimonials2.jpg" alt="thumb1" />
-					<strong>Marry Williams,</strong><span class="carusal-image-thumb-name"> CEO </span>
-					</div>
-					<p>Fusce nec arcu eget nunc scelerisque pharetra eget vel metus. Curabitur a orci et nulla gravida laoreet. Pellentesque dictum ipsum nec placerat dignissim. Vivamus porta pellentesque libero, sit amet placerat mauris iaculis non. Nullam eleifend, eros eget facilisis adipiscing, nibh mi vehicula tellus, non</p>
-				</li><!-- Messgae2 -->
-				<li class="slide" id="image3">
-					<div class="carusal-image-thumb">
-					<img src="<?php echo THEME_URL . '/'?>images/testimonials3.jpg" alt="thumb1" />
-					<strong>Marry Williams,</strong><span class="carusal-image-thumb-name"> CEO </span>
-					</div>
-					<p>Fusce nec arcu eget nunc scelerisque pharetra eget vel metus. Curabitur a orci et nulla gravida laoreet. Pellentesque dictum ipsum nec placerat dignissim. Vivamus porta pellentesque libero, sit amet placerat mauris iaculis non. Nullam eleifend, eros eget facilisis adipiscing, nibh mi vehicula tellus, non</p>
-				</li><!-- Messgae3 -->
-			</ul>
-			<ul class="buttons">
-				<li class="active" id="button1"><a  title="website named desire"></a></li>
-				<li id="button2"><a  title=""></a></li>
-				<li id="button3"><a title=""></a></li>
-			</ul>
-		</div>
-	</div>
+	<?php home_testimonial(); ?> 
 </section>	<!-- Testimonials -->
 
 <section class="home-news">
@@ -82,50 +51,7 @@
 			</div>
 			<div class="col-md-4">
 				<h5>Hoạt động</h5>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
+				<?php baiviet_footer(); ?>
 			</div>
 			<div class="col-md-4">
 				<h5>Bài Học</h5>
@@ -195,24 +121,24 @@
 					<h4><strong><span>T</span>hư viện</strong> ảnh</h4>
 				</div>
 				<div class="flickr-images">
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr2.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr3.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr4.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr5.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr6.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr7.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr8.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr9.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr2.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr3.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr4.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr5.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr6.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr7.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr8.jpg" alt="" /></a>
-					<a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr9.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr1.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr2.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr2.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr3.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr3.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr4.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr4.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr5.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr5.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr6.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr6.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr7.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr7.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr8.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr8.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr9.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr9.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr1.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr2.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr2.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr3.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr3.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr4.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr4.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr5.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr5.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr6.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr6.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr7.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr7.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr8.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr8.jpg" alt="" /></a>
+					<a href="<?php echo THEME_URL . '/'?>images/flickr9.jpg" title=""><img src="<?php echo THEME_URL . '/'?>images/flickr9.jpg" alt="" /></a>
 				</div>
 			</div><!-- Flickr Widget -->
 
@@ -287,11 +213,5 @@
 	
 </div><!-- Side Panel -->
 <?php wp_footer(); ?>
-<?php
-global $loren_options;
-echo '<pre>';
-print_r( $loren_options );
-echo '</pre>';
-?>
 </body>
 </html>

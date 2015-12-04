@@ -44,6 +44,20 @@ function button3_click(event)
     $("#image3").animate({"opacity":1},500, "linear", null);
 }
 
+function button4_click(event)
+{
+     $(".testimonial .slide").css("visibility","hidden");
+     $("#image4").css("visibility","visible");
+     $("#image4").css("opacity","0");
+    $("#image4").animate({"opacity":1},500, "linear", null);
+     $("ul.buttons li").removeClass("active");
+    $("#image4").animate({"opacity":1},500, "linear", null);
+     $("#button4").addClass("active");
+     clearTimeout(timer);
+     timer = setTimeout(eval("button1_click"),"4000");
+    $("#image4").animate({"opacity":1},500, "linear", null);
+}
+
 function OnLoad(event)
 {
      clearTimeout(timer);
@@ -55,6 +69,8 @@ $('#button1').bind('click', button1_click);
 $('#button2').bind('click', button2_click);
 
 $('#button3').bind('click', button3_click);
+
+$('#button4').bind('click', button4_click);
 
 OnLoad();
 

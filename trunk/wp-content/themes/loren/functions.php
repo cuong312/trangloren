@@ -13,20 +13,12 @@ function theme_enqueue_styles() {
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css' );
 	wp_enqueue_style( 'new-sltyle', get_template_directory_uri() . '/css/newstyle.css' );
 	wp_enqueue_style( 'responsive-stylesheet', get_template_directory_uri() . '/css/responsive.css' );
-	//wp_enqueue_style( 'layer-slider', get_template_directory_uri() . '/layerslider/css/layerslider.css' );
-
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.1.9.1.js');
 	wp_enqueue_script( 'testimonials', get_template_directory_uri() . '/js/testimonials.js');
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/script.js');
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.js');
-	//wp_enqueue_script( 'html5lightbox-script', get_template_directory_uri() . '/js/html5lightbox.js');
 	wp_enqueue_script( 'carouFredSel-script', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js');
 	wp_enqueue_script( 'styleswitcher-script', get_template_directory_uri() . '/js/styleswitcher.js');
-	//wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/layerslider/JQuery/jquery-easing-1.3.js');
-	//wp_enqueue_script( 'jquery-transit', get_template_directory_uri() . '/layerslider/JQuery/jquery-transit-modified.js');
-	//wp_enqueue_script( 'layerslider-transitions', get_template_directory_uri() . '/layerslider/js/layerslider.transitions.js');
-	//wp_enqueue_script( 'layerslider-kreaturamedia', get_template_directory_uri() . '/layerslider/js/layerslider.kreaturamedia.jquery.js');
-
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
@@ -220,14 +212,15 @@ function home_khoahoc() {
 					<div class="col-md-3 cources-box">
 						<div class="staff-member cources-member">
 							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" alt="" />
-
-							<div class="member-intro" style="background-color: <?php echo get_post_meta( get_the_ID(), $backgroundString, true );?>;">
-								<h3><?php the_title(); ?></h3>
-								<span>Level 1</span>
-							</div>
+							<a href="<?php the_permalink()?>">
+								<div class="member-intro" style="background-color: <?php echo get_post_meta( get_the_ID(), $backgroundString, true );?>;">
+									<h3><?php the_title(); ?></h3>
+									<span>Level 1</span>
+								</div>
+							</a>
 							<div class="social-contacts">
 								<ul>
-									<li class="view-couses"><a href="#" title=""><i class="fa fa-eye"></i></a></li>
+									<li class="view-couses"><a href="<?php the_permalink()?>" title=""><i class="fa fa-eye"></i></a></li>
 									<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
 								</ul>
 							</div>
@@ -332,3 +325,98 @@ function student_list() {
 	</div>
 	<?php 
 }
+
+/* Hien thi testimonial */
+
+function home_testimonial() {
+	$args = array(
+		'post_type' => 'feedback',
+	);
+	?>
+	<div class="container">
+		<div class="slideshow">
+			<ul class="slides">
+				<?php 
+				$the_query = new WP_Query( $args );
+				$count = 1;
+				if ( $the_query->have_posts() ) :
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+				?>
+				<li style="<?php echo $count == 1 ? 'visibility:visible' : ''?>" class="slide" id="image<?php echo $count++;?>">
+					<div class="carusal-image-thumb">
+					<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID(), 'medium' ) ); ?>" alt="thumb1" />
+					<strong><?php the_title(); ?>,</strong>
+					<span class="carusal-image-thumb-name"> <?php echo get_post_meta( get_the_ID(), 'cong_viec', true );?> </span>
+					</div>
+					<p><?php echo get_post_meta( get_the_ID(), 'phan_hoi', true );?></p>
+				</li><!-- Messgae1 -->
+				<?php
+					endwhile;
+				endif;
+				?>
+			</ul>
+			<ul class="buttons">
+				<li class="active" id="button1"><a></a></li>
+				<li id="button2"><a  title=""></a></li>
+				<li id="button3"><a title=""></a></li>
+				<li id="button4"><a title=""></a></li>
+			</ul>
+		</div>
+	</div>
+	<?php
+}
+
+/* Hien thi các bài viết ở footer */
+
+function baiviet_footer() {
+	$args = array(
+		'post_type' => 'post',
+	);
+	?>
+	<?php 
+	$the_query = new WP_Query( $args );
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+	?>
+	<div class="news-item">
+		<div class="news-thumbnail">
+			<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
+		</div>
+		<div class="news-content">
+			<div class="news-title"><a href="<?php the_permalink()?>"><?php the_title(); ?></a></div>
+			<div class="news-info">
+				<span><?php the_date('d/m/Y');?></span> đăng bởi <span><?php the_author(); ?></span>
+			</div>
+		</div>
+	</div>
+	<?php 
+		endwhile;
+	endif;
+}
+
+/* Custom active menu */
+
+function my_special_nav_class( $classes, $item ) {
+    if ( in_array('current-menu-item', $classes) ) {
+        $classes[] = 'active';
+    }
+
+    if ( get_post_type() == 'teacher' &&  $item->ID == 38) { 
+		$classes[] = 'active';
+    }
+
+    if ( is_single() && get_post_type() == 'post' &&  $item->ID == 42) { 
+		$classes[] = 'active';
+    }
+
+    if ( get_post_type() == 'course' &&  $item->ID == 41) { 
+		$classes[] = 'active';
+    }
+
+    return $classes;
+
+}
+
+add_filter( 'nav_menu_css_class', 'my_special_nav_class', 10, 2 );

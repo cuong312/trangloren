@@ -1,7 +1,7 @@
 <?php get_header(); ?> 
 
 <div id="layerslider-container-fw">
-	<?php layerslider(1) ?>
+	<?php echo do_shortcode("[huge_it_slider id='2']"); ?>
 
 	<div class="message-box">
 		<div class="message-box-title">			
