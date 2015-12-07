@@ -77,8 +77,20 @@ if (! function_exists( 'cuongbui_menu' ) ) {
 		$menu = array(
 			'theme_location' => $menu,
 			'container' => 'nav',
-			'container_class' => 'menu',
-			'items_wrap' => '<ul id="menu-navigation">%3$s</ul>'
+			'container_class' => 'navbar menu',
+			'items_wrap' => '
+							<div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						    </div>
+
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul id="menu-navigation">%3$s</ul>
+							</div> '
 			);
 		wp_nav_menu( $menu );
 	}
@@ -415,8 +427,34 @@ function my_special_nav_class( $classes, $item ) {
 		$classes[] = 'active';
     }
 
+    if ( ( get_the_ID() == 1391 || get_the_ID() == 1388 ) &&  $item->ID == 39) { 
+		$classes[] = 'active';
+    }
+
     return $classes;
 
 }
 
 add_filter( 'nav_menu_css_class', 'my_special_nav_class', 10, 2 );
+
+function home_video( $id ) {
+
+	$postVideo = get_post( $id );
+	?>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">				
+				<h3 class="home-video-title"><?php echo $postVideo->post_title;?></h3>
+				<div class="home-video-content">
+					<p><?php echo get_post_meta( $id, 'tom_tat', true ); ?></p>
+				</div>
+				<a class="btn btn-info" href="<?php echo get_permalink($id); ?>">Xem Chi Tiết</a>
+			</div>
+			<div class="col-sm-6">
+				<div class="home-video-right" style="background-image: url('<?php echo THEME_URL; ?>/images/post_video_border.png')">
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php 
+}

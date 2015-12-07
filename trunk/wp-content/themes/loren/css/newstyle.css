@@ -206,7 +206,7 @@
 }
 
 .sticky {
-    z-index: 3;
+    z-index: 15;
 }
 
 .message-box {
@@ -313,3 +313,20 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
     color: #ffffff !important;
 }
 
+.menu {
+    margin-bottom: 0px !important;
+    border: none;
+}
+
+.menu .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+.menu .navbar-toggle {
+    border-color: #ffffff;
+}
+
+h5.sub-head {
+    margin: 11px 0;
+    color: #4FC0AA;
+}

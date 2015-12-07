@@ -3,20 +3,11 @@
 <div id="layerslider-container-fw">
 	<?php echo do_shortcode("[huge_it_slider id='2']"); ?>
 
-	<div class="message-box">
+	<div class="message-box hide">
 		<div class="message-box-title">			
 			<span><i class="icon-envelope-alt"></i></span>
 			<p>Leave A Message</p>
 			<i class="icon-angle-up"></i>
-		</div>
-		<div class="message-form">
-			<p>Lorem ipsum dolor sit amet, cons ectetur adipisei ing elit. Pellentesque mi tellus, fringilla nonintedi.</p>
-			<form>
-				<input class="form-control" type="text" placeholder="Name" />
-				<input class="form-control" type="email" placeholder="Email" />
-				<textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-				<input class="submit-btn" type="button" value="Submit" />
-			</form>
 		</div>
 	</div><!-- Message Box -->
 	
@@ -102,21 +93,7 @@
 </section>
 
 <section class="home-video">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">				
-				<h3 class="home-video-title">Con đường học tiếng anh tại Trang Loren</h3>
-				<div class="home-video-content">
-					<p>Mauris vitae quam ligula. In tincidunt sapien sed nibh scelerisque congue. Maecenas ut libero eu metus tincidunt lobortis. Duis accumsan at mauris vel lacinia.</p>
-				</div>
-				<a class="btn btn-info" href="">Xem Chi Tiết</a>
-			</div>
-			<div class="col-sm-6">
-				<div class="home-video-right" style="background-image: url('<?php echo THEME_URL; ?>/images/post_video_border.png')">
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php home_video(1391); ?>
 </section>
 
 <?php get_footer(); ?>
