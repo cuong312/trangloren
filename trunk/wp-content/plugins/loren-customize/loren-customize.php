@@ -241,6 +241,41 @@ class WPLoren {
 				'page-attributes',
 			),
 		) );
+
+		// Add course_post_type
+		register_post_type( 'register', array(
+			'labels' => array(
+				'name' 				=> 'Register',
+				'singular_name' 	=> 'Register',
+				'menu_name' 		=> 'Register List',
+				'name_admin_bar' 	=> 'Register',
+				'add_new'			=> 'Add New',
+				'add_new_item'		=> 'Add New',
+				'new_item'			=> 'New Register',
+				'edit_item'			=> 'Edit Register',
+				'view_item'			=> 'View Register',
+				'all_items'			=> 'All Registers',
+				'search_items'		=> 'Search Registers',
+				'parent_item_colon'	=> 'Parent Registers:',
+				'not_found'			=> 'No registers found.',
+				'not_found_in_trash'=> 'No registers found in Trash.'
+			),
+
+			// Frontend
+			'has_archive'		=> false,
+			'public'			=> false,
+			'publicly_queryable'=> false,
+
+			// Admin
+			'capability_type'	=> 'post',
+			'menu_icon'			=> 'dashicons-welcome-learn-more',
+			'query_var'			=> true,
+			'show_in_menu'		=> true,
+			'show_ui'			=> true,
+			'supports'			=> array(
+				'title',
+			),
+		) );
 	}
 
 	function add_teacher_table_columns( $columns ) {

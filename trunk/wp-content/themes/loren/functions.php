@@ -437,6 +437,8 @@ function my_special_nav_class( $classes, $item ) {
 
 add_filter( 'nav_menu_css_class', 'my_special_nav_class', 10, 2 );
 
+
+/* Add home video */
 function home_video( $id ) {
 
 	$postVideo = get_post( $id );
@@ -458,3 +460,134 @@ function home_video( $id ) {
 	</div>
 	<?php 
 }
+
+/* Trang dang ky hoc */
+
+function home_khoahoc_lichhoc() {
+	$args_schedule = array(
+		'post_type' => 'schedule',
+	);
+
+	$args = array(
+		'post_type' => 'course',
+	);
+
+	$backgroundString = 'background_color';
+	?>
+
+
+	<?php 
+	$the_query = new WP_Query( $args );
+
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+	?>
+		
+		<div class="col-sm-12">
+			<h3 class="sub-head"><?php the_title(); ?></h3>
+			<br/>
+			<table class="table table-striped">
+				<tr>
+					<th>STT</th>
+					<th>Mã khóa</th>
+					<th>Thời gian</th>
+					<th>Khai giảng</th>
+					<th>Học phí</th>
+				</tr>
+
+				<?php
+					$courseId = get_the_ID();
+					$count = 0;
+				?> 
+
+				<?php $the_query_schedule = new WP_Query( $args_schedule );
+					if ( $the_query_schedule->have_posts() ) :
+					while ( $the_query_schedule->have_posts() ) :
+						$the_query_schedule->the_post();
+				?>
+
+				<?php
+					$makhoa = get_post_meta( get_the_ID(), 'khoa_hoc', true );
+					if ( $makhoa == $courseId ) {
+
+						?> 
+						<tr>
+							<td><?php echo ++$count;?></td>
+							<td><?php the_title(); ?></td>
+							<td><?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?></td>
+							<td><?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></td>
+							<td><?php echo get_post_meta( get_the_ID(), 'hoc_phi', true );?></td>
+						</tr>
+
+						<?php
+
+					}
+				?>
+
+				<?php
+					endwhile;
+				endif;
+				?>
+			</table>
+		</div>
+
+	<?php
+		endwhile;
+	endif;
+	?> 
+
+
+	<div class="col-sm-6">
+		<div class="form">
+			<h3 class="sub-head">Chọn lịch học:</h3>
+
+	<?php 
+	$the_query = new WP_Query( $args );
+
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+	?>
+		
+				<?php
+					$courseId = get_the_ID();
+					$count = 0;
+				?> 
+
+				<?php $the_query_schedule = new WP_Query( $args_schedule );
+					if ( $the_query_schedule->have_posts() ) :
+					while ( $the_query_schedule->have_posts() ) :
+						$the_query_schedule->the_post();
+				?>
+
+				<?php
+					$makhoa = get_post_meta( get_the_ID(), 'khoa_hoc', true );
+					if ( $makhoa == $courseId ) {
+
+						?> 
+						<h5 class="sub-head"><label><input type="radio" name="khoahoc" value="<?php echo get_the_ID();?>"> <span class="test-a"> <?php the_title(); ?>: <?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?>. Khai giảng <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></span></label></h5>
+
+						<?php
+
+					}
+				?>
+
+				<?php
+					endwhile;
+				endif;
+				?>
+
+	<?php
+		endwhile;
+	endif;
+	?> 
+
+		</div>
+	</div>
+				
+
+	<?php 
+		
+}
+
