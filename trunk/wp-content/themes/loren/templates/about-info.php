@@ -19,7 +19,7 @@
 			<h1><?php the_title(); ?><span></span></h1>
 		</div><!--Page Title-->
 	</div>
-	<div class="container">
+	<div class="container .page-content">
 		<div class="col-sm-12">
 			<?php echo the_content(); ?>
 		</div>

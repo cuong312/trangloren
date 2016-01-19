@@ -338,3 +338,11 @@ h5.sub-head {
 .home-slider-top {
     margin-top: 45px;
 }
+
+.page-content {
+    font-size: 14px;
+    font-family: 'Open Sans';
+    text-align: justify;
+    line-height: 26px;
+    font-weight: 400;
+}
