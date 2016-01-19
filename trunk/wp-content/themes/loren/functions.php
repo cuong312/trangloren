@@ -163,7 +163,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 text-center">
-						<a class="about-icon" href="">
+						<a class="about-icon" href="<?php echo $loren_options['home-about-1-link']?>">
 							<i class="fa fa-university"></i>
 						</a>
 						<div class="about-content">
@@ -173,7 +173,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</div>
 					</div>
 					<div class="col-sm-4 text-center">
-						<a class="about-icon" href="">
+						<a class="about-icon" href="<?php echo $loren_options['home-about-2-link']?>">
 							<i class="fa fa-users"></i>
 						</a>
 						<div class="about-content">
@@ -183,7 +183,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</div>
 					</div>
 					<div class="col-sm-4 text-center">
-						<a class="about-icon" href="">
+						<a class="about-icon" href="<?php echo $loren_options['home-about-3-link']?>">
 							<i class="fa fa-graduation-cap"></i>
 						</a>
 						<div class="about-content">
