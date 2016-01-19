@@ -6,8 +6,8 @@
 
 <?php get_header(); ?>
 
-<div class="top-image">
-	<img src="<?php echo THEME_URL . '/'?>images/single-page-top2.jpg" alt="" />
+<div class="top-image about-image">
+	<img src="<?php echo THEME_URL . '/'?>images/about-page-top.jpg" alt="" />
 </div><!-- Page Top Image -->
 
 <?php

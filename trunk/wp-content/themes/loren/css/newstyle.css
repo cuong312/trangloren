@@ -330,3 +330,7 @@ h5.sub-head {
     margin: 11px 0;
     color: #4FC0AA;
 }
+
+.about-image {
+    height: auto !important;
+}
