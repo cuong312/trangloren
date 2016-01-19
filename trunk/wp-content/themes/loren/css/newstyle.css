@@ -334,3 +334,7 @@ h5.sub-head {
 .about-image {
     height: auto !important;
 }
+
+.home-slider-top {
+    margin-top: 90px;
+}

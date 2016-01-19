@@ -1,6 +1,6 @@
 <?php get_header(); ?> 
 
-<div id="layerslider-container-fw">
+<div id="layerslider-container-fw" class="home-slider-top">
 	<?php echo do_shortcode("[huge_it_slider id='2']"); ?>
 
 	<div class="message-box hide">
