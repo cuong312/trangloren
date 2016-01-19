@@ -156,8 +156,8 @@ if ( !function_exists( 'home_about_secction' ) ) {
 								<br>
 								with personalized support default';
 		$home_about_1 = isset( $loren_options['home-about-1'] ) ? $loren_options['home-about-1'] : $home_about_default;
-		$home_about_2 = isset( $loren_options['home-about-2'] ) ? $loren_options['home-about-1'] : $home_about_default;
-		$home_about_3 = isset( $loren_options['home-about-3'] ) ? $loren_options['home-about-1'] : $home_about_default;
+		$home_about_2 = isset( $loren_options['home-about-2'] ) ? $loren_options['home-about-2'] : $home_about_default;
+		$home_about_3 = isset( $loren_options['home-about-3'] ) ? $loren_options['home-about-3'] : $home_about_default;
 		?>
 		<section class="home-about">
 			<div class="container">
