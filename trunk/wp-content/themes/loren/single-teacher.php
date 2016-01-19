@@ -20,7 +20,7 @@
 				<h4 class="teacher-job-title"><?php echo get_post_meta( get_the_ID(), 'cong_viec', true ); ?></h4>
 				<div>
 					<p class="tearch-info"><?php echo $wp_query->post->post_excerpt; ?></p>
-					<p class="tearch-contact">Email John: <?php echo get_post_meta( get_the_ID(), 'email', true ); ?></p>
+					<p class="tearch-contact">Email: <a href="mailto:<?php echo get_post_meta( get_the_ID(), 'email', true ); ?>"><?php echo get_post_meta( get_the_ID(), 'email', true ); ?></a></p>
 					<p class="tearch-contact">Phone: <?php echo get_post_meta( get_the_ID(), 'dien_thoai', true ); ?></p>
 
 				</div>
