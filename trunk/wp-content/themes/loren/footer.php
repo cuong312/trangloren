@@ -42,6 +42,8 @@
 					<p>Hãy đăng ký để nhận các tin tức mới nhất của các khóa học từ Trang Loren</p>
 					<input class="form-control" type="email" placeholder="Email" />
 				</div>
+				<ul class="social-bar">
+					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/facebook.jpg" alt="" /></a></li>				
 				<div class="newsletter-btn">
 					<input type="button" value="Đăng ký" />
 				</div>
