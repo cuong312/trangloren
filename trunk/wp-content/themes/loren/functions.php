@@ -136,7 +136,7 @@ if ( ! function_exists( 'cuongbui_lienhe' ) ) {
 			</li>
 			<li>
 				<span><i class="icon-envelope-alt"></i>EMAIL</span>
-				<p><?php echo $dienthoai; ?></p>
+				<p><?php echo $email; ?></p>
 			</li>
 			<li>
 				<span><i class="icon-link"></i>FACEBOOK</span>
