@@ -236,7 +236,6 @@ function home_khoahoc() {
 							<a href="<?php the_permalink()?>">
 								<div class="member-intro" style="background-color: <?php echo get_post_meta( get_the_ID(), $backgroundString, true );?>;">
 									<h3><?php the_title(); ?></h3>
-									<span>Level 1</span>
 								</div>
 							</a>
 							<div class="social-contacts">
