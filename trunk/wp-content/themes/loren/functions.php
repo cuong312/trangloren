@@ -205,14 +205,14 @@ if ( !function_exists( 'home_about_secction' ) ) {
 function home_khoahoc() {
 	$args = array(
 		'post_type' => 'course',
-		'order' => 'DESC'
+		'order' => 'ASC'
 	);
 
 	if ( is_home() ) {
 		$args = array(
 			'post_type' => 'course',
 			'posts_per_page' => 4,
-			'order' => 'DESC'
+			'order' => 'ASC'
 		);
 	}
 
