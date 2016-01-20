@@ -43,7 +43,7 @@
 					<input class="form-control" type="email" placeholder="Email" />
 				</div>
 				<ul class="social-bar">
-					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/facebook.jpg" alt="" /></a></li>				
+					<li></li>				
 				<div class="newsletter-btn">
 					<input type="button" value="Đăng ký" />
 				</div>
