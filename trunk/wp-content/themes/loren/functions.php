@@ -205,7 +205,16 @@ if ( !function_exists( 'home_about_secction' ) ) {
 function home_khoahoc() {
 	$args = array(
 		'post_type' => 'course',
+		'order' => 'DESC'
 	);
+
+	if ( is_home() ) {
+		$args = array(
+			'post_type' => 'course',
+			'posts_per_page' => 4,
+			'order' => 'DESC'
+		);
+	}
 
 	$backgroundString = 'background_color';
 	?>
