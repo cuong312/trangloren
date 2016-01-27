@@ -336,6 +336,15 @@ h5.sub-head {
         margin-top: 0;
         padding-top: 60px;
     }
+
+    #menu-navigation li a {
+        padding: 16px 16px 6px;
+        text-align: left;
+    }
+
+    .menu ul li ul {
+        top: 40px;
+    }
 }
 
 
