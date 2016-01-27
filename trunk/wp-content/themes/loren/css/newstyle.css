@@ -331,7 +331,7 @@ h5.sub-head {
     color: #4FC0AA;
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
     .home-slider-top {
         margin-top: 0;
         padding-top: 60px;
@@ -396,7 +396,7 @@ h5.sub-head {
     }
 
     .home-slider-top {
-        margin-top: 90px;
+        margin-top: 89px;
     }
 
 }
