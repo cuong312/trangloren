@@ -331,6 +331,13 @@ h5.sub-head {
     color: #4FC0AA;
 }
 
+@media (min-width: 767px) {
+    .home-slider-top {
+        margin-top: 0;
+        padding-top: 60px;
+    }
+}
+
 
 @media (max-width: 992px) {
     .newsletter {
@@ -373,6 +380,10 @@ h5.sub-head {
     .menu ul li ul {
         top: 53px !important;
     }
+
+    .home-slider-top {
+        margin-top: 58px;
+    }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -384,14 +395,14 @@ h5.sub-head {
         padding: 36px 8px 32px !important;
     }
 
+    .home-slider-top {
+        margin-top: 90px;
+    }
+
 }
 
 .about-image {
     height: auto !important;
-}
-
-.home-slider-top {
-    margin-top: 90px;
 }
 
 .page-content {
