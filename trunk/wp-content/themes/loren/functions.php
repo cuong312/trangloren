@@ -221,7 +221,7 @@ function home_khoahoc() {
 						$the_query->the_post();
 				?>
 
-					<div class="col-md-3 cources-box">
+					<div class="col-sm-6 col-md-3 cources-box">
 						<div class="staff-member cources-member">
 							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ); ?>" alt="" />
 							<a href="<?php the_permalink()?>">

@@ -330,3 +330,56 @@ h5.sub-head {
     margin: 11px 0;
     color: #4FC0AA;
 }
+
+@media (max-width: 992px) {
+    .newsletter {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .menu-item a {
+        font-size: 12px !important;
+        padding: 20px 5px !important;
+    }
+
+    .menu-item a {
+        font-size: 12px !important;
+        padding: 20px 5px !important;
+    }
+
+    .logo {
+        float: left;
+        padding: 3px 0;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo h1 i {
+        font-size: 37px;
+    }
+
+    .menu {
+        margin-right: 0;
+    }
+
+    .menu ul li ul {
+        top: 53px !important;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .menu {
+        margin-right: 0;
+    }
+
+    #menu-navigation li a {
+        padding: 36px 8px 32px !important;
+    }
+}
