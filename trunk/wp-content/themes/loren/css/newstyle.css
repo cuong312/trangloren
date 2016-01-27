@@ -395,7 +395,7 @@ h5.sub-head {
     }
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1199px) {
     .menu {
         margin-right: 0;
     }
@@ -408,6 +408,12 @@ h5.sub-head {
         margin-top: 89px;
     }
 
+}
+
+@media (min-width: 1200px) {
+    .home-slider-top {
+        margin-top: 90px;
+    }
 }
 
 .about-image {
