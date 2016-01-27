@@ -331,6 +331,7 @@ h5.sub-head {
     color: #4FC0AA;
 }
 
+
 @media (max-width: 992px) {
     .newsletter {
         margin-top: 40px;
@@ -382,4 +383,21 @@ h5.sub-head {
     #menu-navigation li a {
         padding: 36px 8px 32px !important;
     }
+
+}
+
+.about-image {
+    height: auto !important;
+}
+
+.home-slider-top {
+    margin-top: 90px;
+}
+
+.page-content {
+    font-size: 14px;
+    font-family: 'Open Sans';
+    text-align: justify;
+    line-height: 26px;
+    font-weight: 400;
 }

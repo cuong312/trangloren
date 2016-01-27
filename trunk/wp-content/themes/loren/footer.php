@@ -1,110 +1,4 @@
 
-<section class="testimonial">
-	<?php home_testimonial(); ?> 
-</section>	<!-- Testimonials -->
-
-<section class="home-news">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<h5>Lịch học</h5>
-				<div class="news-event" style="background-color: #65BDE4;">
-					<div>
-						<i class="fa fa-thumb-tack"></i> Khai Giảng Workshop k24
-					</div>
-					<div>
-						<i class="fa fa-clock-o"> 7:00 to 9:30</i> <i class="fa fa-calendar"> 01/12/2015</i> 
-					</div>
-				</div>
-				<div class="news-event" style="background-color: #1dbb90;">
-					<div>
-						<i class="fa fa-thumb-tack"></i> Khai Giảng Workshop k24
-					</div>
-					<div>
-						<i class="fa fa-clock-o"> 7:00 to 9:30</i> <i class="fa fa-calendar"> 01/12/2015</i> 
-					</div>
-				</div>
-				<div class="news-event" style="background-color: #ffb20e;">
-					<div>
-						<i class="fa fa-thumb-tack"></i> Khai Giảng Workshop k24
-					</div>
-					<div>
-						<i class="fa fa-clock-o"> 7:00 to 9:30</i> <i class="fa fa-calendar"> 01/12/2015</i> 
-					</div>
-				</div>
-				<div class="news-event" style="background-color: #428BCA;">
-					<div>
-						<i class="fa fa-thumb-tack"></i> Khai Giảng Workshop k24
-					</div>
-					<div>
-						<i class="fa fa-clock-o"> 7:00 to 9:30</i> <i class="fa fa-calendar"> 01/12/2015</i> 
-					</div>
-				</div>
-				<div class="news-event" style="background-color: #4FC0AA;">
-					<div>
-						<i class="fa fa-thumb-tack"></i> Khai Giảng Workshop k24
-					</div>
-					<div>
-						<i class="fa fa-clock-o"> 7:00 to 9:30</i> <i class="fa fa-calendar"> 01/12/2015</i> 
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h5>Hoạt động</h5>
-				<?php baiviet_footer(); ?>
-			</div>
-			<div class="col-md-4">
-				<h5>Bài Học</h5>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-</section>
 		
 </div>
 <footer>
@@ -149,12 +43,7 @@
 					<input class="form-control" type="email" placeholder="Email" />
 				</div>
 				<ul class="social-bar">
-					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/rss.jpg" alt="" /></a></li>
-					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/facebook.jpg" alt="" /></a></li>
-					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/gplus.jpg" alt="" /></a></li>
-					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/linked-in.jpg" alt="" /></a></li>
-					<li><a href="#" title=""><img src="<?php echo THEME_URL . '/'?>images/pinterest.jpg" alt="" /></a></li>
-				</ul>
+					<li></li>				
 				<div class="newsletter-btn">
 					<input type="button" value="Đăng ký" />
 				</div>

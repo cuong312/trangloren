@@ -136,7 +136,7 @@ if ( ! function_exists( 'cuongbui_lienhe' ) ) {
 			</li>
 			<li>
 				<span><i class="icon-envelope-alt"></i>EMAIL</span>
-				<p><?php echo $dienthoai; ?></p>
+				<p><?php echo $email; ?></p>
 			</li>
 			<li>
 				<span><i class="icon-link"></i>FACEBOOK</span>
@@ -156,14 +156,14 @@ if ( !function_exists( 'home_about_secction' ) ) {
 								<br>
 								with personalized support default';
 		$home_about_1 = isset( $loren_options['home-about-1'] ) ? $loren_options['home-about-1'] : $home_about_default;
-		$home_about_2 = isset( $loren_options['home-about-2'] ) ? $loren_options['home-about-1'] : $home_about_default;
-		$home_about_3 = isset( $loren_options['home-about-3'] ) ? $loren_options['home-about-1'] : $home_about_default;
+		$home_about_2 = isset( $loren_options['home-about-2'] ) ? $loren_options['home-about-2'] : $home_about_default;
+		$home_about_3 = isset( $loren_options['home-about-3'] ) ? $loren_options['home-about-3'] : $home_about_default;
 		?>
 		<section class="home-about">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 text-center">
-						<a class="about-icon" href="">
+						<a class="about-icon" href="<?php echo $loren_options['home-about-1-link']?>">
 							<i class="fa fa-university"></i>
 						</a>
 						<div class="about-content">
@@ -173,7 +173,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</div>
 					</div>
 					<div class="col-sm-4 text-center">
-						<a class="about-icon" href="">
+						<a class="about-icon" href="<?php echo $loren_options['home-about-2-link']?>">
 							<i class="fa fa-users"></i>
 						</a>
 						<div class="about-content">
@@ -183,7 +183,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</div>
 					</div>
 					<div class="col-sm-4 text-center">
-						<a class="about-icon" href="">
+						<a class="about-icon" href="<?php echo $loren_options['home-about-3-link']?>">
 							<i class="fa fa-graduation-cap"></i>
 						</a>
 						<div class="about-content">
@@ -205,7 +205,16 @@ if ( !function_exists( 'home_about_secction' ) ) {
 function home_khoahoc() {
 	$args = array(
 		'post_type' => 'course',
+		'order' => 'ASC'
 	);
+
+	if ( is_home() ) {
+		$args = array(
+			'post_type' => 'course',
+			'posts_per_page' => 4,
+			'order' => 'ASC'
+		);
+	}
 
 	$backgroundString = 'background_color';
 	?>
@@ -227,7 +236,6 @@ function home_khoahoc() {
 							<a href="<?php the_permalink()?>">
 								<div class="member-intro" style="background-color: <?php echo get_post_meta( get_the_ID(), $backgroundString, true );?>;">
 									<h3><?php the_title(); ?></h3>
-									<span>Level 1</span>
 								</div>
 							</a>
 							<div class="social-contacts">

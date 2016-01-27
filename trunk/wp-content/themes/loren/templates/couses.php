@@ -11,7 +11,7 @@
 </div>
 
 <section class="page">
-	<div class="container">
+	<div class="container page-content">
 		<div class="page-title">
 			<h1>Khóa học<span></span></h1>
 		</div><!--Page Title-->

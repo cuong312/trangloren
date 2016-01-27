@@ -13,7 +13,7 @@
 <section class="page">
 	<div class="container">
 		<div class="page-title">
-			<h1>Giáo viên<span></span></h1>
+			<h1>Giảng viên<span></span></h1>
 		</div><!--Page Title-->
 	</div>
 	
