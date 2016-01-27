@@ -18,12 +18,19 @@
 	</div>	
 	<div class="container">
 		<div class="left-content nine-column">
+
+			<?php 
+				// the query to set the posts per page to 3
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+			?>
 			<?php
 				$args = array(
 					'post_type' => 'post',
+					'paged' => $paged,
 				);
-				$the_query = new WP_Query( $args );
-				if( $the_query->have_posts() ) : while ( $the_query->have_posts() ) :  $the_query->the_post();
+				query_posts($args);
+				if( have_posts() ) : while ( have_posts() ) :  the_post();
 			?>
 			<div class="blog-post">
 				<h2><a href="<?php the_permalink()?>" title=""><?php the_title(); ?></a></h2>
@@ -40,15 +47,17 @@
 			</div>
 			<?php
 				endwhile;
+				?>
+					<div class="pagination-area">				
+						<div class="pagination-buttons">
+							<?php previous_posts_link('<i class="icon-angle-left"></i>'); ?>
+							<?php next_posts_link('<i class="icon-angle-right"></i>'); ?>
+						</div>
+					</div>
+				<?php 
 				endif;
 			?>
 			
-			<div class="pagination-area">				
-				<div class="pagination-buttons">
-					<a href="#" title=""><i class="icon-angle-left"></i></a>
-					<a href="#" title=""><i class="icon-angle-right"></i></a>
-				</div>
-			</div>
 			
 			
 		</div>
