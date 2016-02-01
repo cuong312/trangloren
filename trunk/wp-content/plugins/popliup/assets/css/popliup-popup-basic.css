@@ -1,0 +1,254 @@
+/** GRID SYSTEM **/
+/*  SECTIONS  ============================================================================= */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+/*  GROUPING  ============================================================================= */
+.hbm-row {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+  /*  GRID COLUMN SETUP   ==================================================================== */
+}
+.hbm-row:before,
+.hbm-row:after {
+  content: "";
+  display: table;
+}
+.hbm-row:after {
+  clear: both;
+}
+.hbm-row .col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+  /* all browsers except IE6 and lower */
+}
+.hbm-row .col:first-child {
+  margin-left: 0;
+}
+.hbm-row .col-12 {
+  width: 100%;
+}
+.hbm-row .col-11 {
+  width: 91.53%;
+}
+.hbm-row .col-10 {
+  width: 83.06%;
+}
+.hbm-row .col-9 {
+  width: 74.6%;
+}
+.hbm-row .col-8 {
+  width: 66.13%;
+}
+.hbm-row .col-7 {
+  width: 57.66%;
+}
+.hbm-row .col-6 {
+  width: 49.2%;
+}
+.hbm-row .col-5 {
+  width: 40.73%;
+}
+.hbm-row .col-4 {
+  width: 32.26%;
+}
+.hbm-row .col-3 {
+  width: 23.8%;
+}
+.hbm-row .col-2 {
+  width: 15.33%;
+}
+.hbm-row .col-1 {
+  width: 6.86%;
+}
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .hbm-row .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+/*  GRID OF TWELVE   ============================================================================= */
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .hbm-row .col-12 {
+    width: 100%;
+  }
+  .hbm-row .col-11 {
+    width: 100%;
+  }
+  .hbm-row .col-10 {
+    width: 100%;
+  }
+  .hbm-row .col-9 {
+    width: 100%;
+  }
+  .hbm-row .col-8 {
+    width: 100%;
+  }
+  .hbm-row .col-7 {
+    width: 100%;
+  }
+  .hbm-row .col-6 {
+    width: 100%;
+  }
+  .hbm-row .col-5 {
+    width: 100%;
+  }
+  .hbm-row .col-4 {
+    width: 100%;
+  }
+  .hbm-row .col-3 {
+    width: 100%;
+  }
+  .hbm-row .col-2 {
+    width: 100%;
+  }
+  .hbm-row .col-1 {
+    width: 100%;
+  }
+}
+/*** GRID SYSTEM ENDS ***/
+.condition.disabled {
+  opacity: 0.5;
+}
+#previewBtnHldr {
+  text-align: center;
+  padding: 10px;
+  border-top: solid 1px #eee;
+}
+#previewBtnHldr .dashicons {
+  line-height: 27px;
+}
+.popliup-box.center {
+  top: 50%;
+  left: 50%;
+}
+.popliup-box.top-left {
+  top: 0;
+  left: 0;
+  margin: 20px;
+}
+.popliup-box.top-right {
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+.popliup-box.bottom-left {
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+}
+.popliup-box.bottom-right {
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+#popliDsiaplyOptionsHldr .wp-picker-container {
+  vertical-align: middle;
+}
+#popliDsiaplyOptionsHldr > div {
+  margin: 10px 0;
+}
+#allConditions {
+  padding: 10px;
+  overflow: auto;
+  border: solid 1px #d4d4d4;
+}
+.condition-title {
+  background-color: #EEE;
+  padding: 10px;
+  margin-top: 15px;
+  border: solid 1px #d4d4d4;
+}
+.condition-title h2 {
+  margin: 0 !important;
+  display: inline-block;
+  font-size: 1.3em !important;
+}
+.condition-title .condition-desp {
+  font-style: italic;
+  display: block;
+}
+.condition-toggle {
+  float: right;
+}
+.condition-content {
+  padding: 15px;
+  background-color: #F7F7F7;
+  border: solid 1px #d4d4d4;
+  border-top: 0;
+}
+.condition-content textarea {
+  width: 100%;
+}
+.condition-info {
+  margin-bottom: 5px;
+}
+/** UI STYLES **/
+.wp-admin select {
+  vertical-align: top;
+  margin-top: 0;
+}
+/** BOOTSTRAP STYLES **/
+.dnone {
+  display: none;
+}
+.btn-success {
+  color: #FFF;
+  background-color: #5CB85C;
+  border-color: #4CAE4C;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+}
+.btn-default {
+  color: #333;
+  background-color: #FFF;
+  border-color: #CCC;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #E6E6E6;
+  border-color: #ADADAD;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+/** RESPONSIVE CSS **/
+@media only screen and (min-width: 1200px) {
+  #popliupDisplayOptions {
+    float: right;
+    width: 49%;
+  }
+  #popliupDisplayConditions {
+    float: left;
+    width: 49%;
+  }
+}
