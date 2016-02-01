@@ -6,10 +6,9 @@
 
 <?php get_header(); ?> 
 
-<div class="top-image">
-	<img src="<?php echo THEME_URL . '/'?>images/single-page-top2.jpg" alt="" />
-</div><!-- Page Top Image -->
-
+<div id="layerslider-container-fw" class="home-slider-top">
+	<?php echo do_shortcode("[huge_it_slider id='4']"); ?>
+</div>
 <section class="page">
 	<div class="container">
 		<div class="page-title">

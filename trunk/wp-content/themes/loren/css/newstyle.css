@@ -331,6 +331,13 @@ h5.sub-head {
     color: #4FC0AA;
 }
 
+.top-image-course-detail {
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+    margin-top: 90px;
+}
+
 @media (max-width: 767px) {
     .home-slider-top {
         margin-top: 0;
