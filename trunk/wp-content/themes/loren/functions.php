@@ -321,7 +321,7 @@ function student_list() {
 					while ( $the_query->have_posts() ) :
 						$the_query->the_post();
 				?>
-				<div class="col-md-3">
+				<div class="col-sm-4 col-md-3">
 					<div class="causes-image">
 						<div class="student-image" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID(), 'medium' ) ); ?>')"></div>
 						<div class="cause-heading">
@@ -389,9 +389,11 @@ function home_testimonial() {
 
 /* Hien thi các bài viết ở footer */
 
-function baiviet_footer() {
+function baiviet_footer($categoryId) {
 	$args = array(
 		'post_type' => 'post',
+		'category__in' => $categoryId,
+		'posts_per_page' => 4,
 	);
 	?>
 	<?php 
@@ -401,8 +403,9 @@ function baiviet_footer() {
 			$the_query->the_post();
 	?>
 	<div class="news-item">
-		<div class="news-thumbnail">
-			<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
+		<?php $imageURL = ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) != '' ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) : THEME_URL . '/images/photo.jpg';?>
+		<div class="news-thumbnail" style="background-image: url('<?php echo $imageURL?>');">
+
 		</div>
 		<div class="news-content">
 			<div class="news-title"><a href="<?php the_permalink()?>"><?php the_title(); ?></a></div>
@@ -416,6 +419,42 @@ function baiviet_footer() {
 	endif;
 }
 
+
+/* Hien thi lịch học ở footer */
+
+function lichhoc_footer() {
+	$args = array(
+		'post_type' => 'schedule',
+		'posts_per_page' => 5,
+	);
+	$colorArray = array(
+		'#65BDE4',
+		'#1dbb90',
+		'#ffb20e',
+		'#428BCA',
+		'#4FC0AA'
+		);
+	$iColor = 0;
+	?>
+	<?php 
+	$the_query = new WP_Query( $args );
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) :
+			$the_query->the_post();
+	?>
+
+	<div class="news-event" style="background-color: <?php echo $colorArray[$iColor++]?>;">
+		<div>
+			<i class="fa fa-thumb-tack"></i> Khai Giảng <?php the_title(); ?>
+		</div>
+		<div>
+			<i class="fa fa-clock-o"> <?php echo get_post_meta( get_the_ID(), 'gio_khai_giang', true );?></i> <i class="fa fa-calendar"> <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></i> 
+		</div>
+	</div>
+	<?php 
+		endwhile;
+	endif;
+}
 /* Custom active menu */
 
 function my_special_nav_class( $classes, $item ) {
@@ -524,7 +563,7 @@ function home_khoahoc_lichhoc() {
 							<td><?php echo ++$count;?></td>
 							<td><?php the_title(); ?></td>
 							<td><?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?></td>
-							<td><?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></td>
+							<td><?php echo get_post_meta( get_the_ID(), 'gio_khai_giang', true );?> <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></td>
 							<td><?php echo get_post_meta( get_the_ID(), 'hoc_phi', true );?></td>
 						</tr>
 

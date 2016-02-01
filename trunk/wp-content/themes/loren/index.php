@@ -56,7 +56,8 @@
 		<div class="row">
 			<div class="col-md-4">
 				<h5>Lịch học</h5>
-				<div class="news-event" style="background-color: #65BDE4;">
+				<?php lichhoc_footer(); ?>
+				<!-- <div class="news-event" style="background-color: #65BDE4;">
 					<div>
 						<i class="fa fa-thumb-tack"></i> Khai Giảng Workshop k24
 					</div>
@@ -95,58 +96,15 @@
 					<div>
 						<i class="fa fa-clock-o"> 7:00 to 9:30</i> <i class="fa fa-calendar"> 01/12/2015</i> 
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-md-4">
 				<h5>Hoạt động</h5>
-				<?php baiviet_footer(); ?>
+				<?php baiviet_footer(66); ?>
 			</div>
 			<div class="col-md-4">
 				<h5>Bài Học</h5>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
-				<div class="news-item">
-					<div class="news-thumbnail">
-						<img src="<?php echo THEME_URL . '/'?>images/flickr1.jpg">
-					</div>
-					<div class="news-content">
-						<div class="news-title">Bắt đầu học tiếng anh với Workshop Pronunciation</div>
-						<div class="news-info">
-							<span>25/05/2015</span> đăng bởi <span>Thắng Đoàn</span>
-						</div>
-					</div>
-				</div>
+				<?php baiviet_footer(65); ?>
 			</div>
 
 		</div>

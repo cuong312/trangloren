@@ -139,6 +139,10 @@
     color: #5D5959;
 }
 
+.news-title a {
+    color: #5D5959 !important;
+}
+
 .news-info {
     font-family: Roboto;
     font-style: italic;
@@ -167,6 +171,11 @@
     border-radius: 10px;
     font-size: 15px;
     margin-bottom: 12px;
+}
+
+.news-thumbnail {
+    background-position: center center;
+    background-size: cover;
 }
 
 .cources {
@@ -355,6 +364,21 @@ h5.sub-head {
 
     .menu ul li ul {
         top: 60px;
+    }
+
+    .student-image {
+        background-color: #3d3d3d;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 3px;
+        height: 358px;
+        width: 100%;
+    }
+
+    .our-causes-hover p,
+    .cause-heading p {
+        display: block !important;
     }
 }
 
