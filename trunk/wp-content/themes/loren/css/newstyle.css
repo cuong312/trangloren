@@ -338,6 +338,10 @@ h5.sub-head {
     margin-top: 90px;
 }
 
+.page-title h1 {
+    z-index: 3;
+}
+
 @media (max-width: 767px) {
     .home-slider-top {
         margin-top: 0;
