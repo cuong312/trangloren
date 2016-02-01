@@ -10,8 +10,8 @@
 	if( have_posts() ) : while ( have_posts() ) : the_post();
 	$imageUrl = wp_get_attachment_url( get_post_meta( get_the_ID(), 'anh_banner', true ));
 ?>
-<div class="top-image top-image-course-detail" style="background-image: url('<?php echo $imageUrl; ?>');">
-
+<div id="layerslider-container-fw" class="home-slider-top">
+	<?php echo do_shortcode("[huge_it_slider id='6']"); ?>
 </div>
 
 <section class="page">
