@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 <?php
 		if( have_posts() ) : while ( have_posts() ) : the_post();
-		$imageUrl = wp_get_attachment_url( get_post_meta( get_the_ID(), 'anh_banner', true ));
+		$imageShortCode = get_post_meta( get_the_ID(), 'short_code_slider', true );
 	?>
-<div class="top-image top-image-course-detail" style="background-image: url('<?php echo $imageUrl; ?>')">
-</div><!-- Page Top Image -->
+<div id="layerslider-container-fw" class="home-slider-top">
+	<?php echo do_shortcode($imageShortCode); ?>
+</div>
 
 <section class="page">
 	<div class="container">

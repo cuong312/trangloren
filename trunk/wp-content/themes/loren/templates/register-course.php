@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <div id="layerslider-container-fw" class="home-slider-top">
-	<?php echo do_shortcode("[huge_it_slider id='4']"); ?>
+	<?php echo do_shortcode("[huge_it_slider id='13']"); ?>
 </div>
 	
 <section class="page">

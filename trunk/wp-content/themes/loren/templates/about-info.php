@@ -6,9 +6,9 @@
 
 <?php get_header(); ?>
 
-<div class="top-image about-image">
-	<img src="<?php echo THEME_URL . '/'?>images/about-page-top.jpg" alt="" />
-</div><!-- Page Top Image -->
+<div id="layerslider-container-fw" class="home-slider-top">
+	<?php echo do_shortcode("[huge_it_slider id='12']"); ?>
+</div>
 
 <?php
 	if( have_posts() ) : while ( have_posts() ) : the_post();
