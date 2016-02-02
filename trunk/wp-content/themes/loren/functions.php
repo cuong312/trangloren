@@ -53,16 +53,18 @@ if ( !function_exists('cuongbui_theme_setup') ) {
 		/* Them menu */
 		register_nav_menu( 'primary-menu', __('Primary Menu', 'cuongbui') );
 
-		// /* Tao side bar */
-		// $sidebar = array(
-		// 	'name' => __('Main Sidebar', 'cuongbui'),
-		// 	'id' => 'main-sidebar',
-		// 	'description' => __('Default sidebar'),
-		// 	'class' => 'main-sidebar',
-		// 	'before_title' => '<h3 class="widgettitle">',
-		// 	'after_title' => '</h3>'
-		// 	);
-		// register_sidebar( $sidebar );
+		/* Tao side bar */
+		$sidebar = array(
+			'name' => __('Main Sidebar', 'cuongbui'),
+			'id' => 'main-sidebar',
+			'description' => __('Default sidebar'),
+			'class' => 'sidebar-list',
+			'before_widget' => '<div class="sidebar-widget">',
+			'after_widget'  => '</div>',
+			'before_title' => '<div class="sidebar-title"><h4>',
+			'after_title' => '</h4></div>'
+			);
+		register_sidebar( $sidebar );
 
 
 
@@ -613,7 +615,7 @@ function home_khoahoc_lichhoc() {
 					if ( $makhoa == $courseId ) {
 
 						?> 
-						<h5 class="sub-head"><label><input type="radio" name="khoahoc" value="<?php echo get_the_ID();?>"> <span class="test-a"> <?php the_title(); ?>: <?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?>. Khai giảng <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></span></label></h5>
+						<h5 class="sub-head"><label><input type="radio" name="khoa_hoc" value="<?php echo get_the_ID();?>"> <span class="test-a"> <?php the_title(); ?>: <?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?>. Khai giảng <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></span></label></h5>
 
 						<?php
 
@@ -637,4 +639,33 @@ function home_khoahoc_lichhoc() {
 	<?php 
 		
 }
+
+/* Dang ky khoa hoc ajax*/
+
+function register_course_ajax() {
+	if ($_POST['name'] == '' || $_POST['phone'] = '' || !isset($_POST['khoa_hoc'])) {
+		echo json_encode(array(
+			'status' => 0
+			));
+	} else {		
+		$postarr = array(
+			'post_title' => $_POST['name'],
+			'post_type' => 'register',
+			'post_status'   => 'publish',
+		);
+		$postId = wp_insert_post( $postarr, true );
+		add_post_meta($postId, 'phone', $_POST['phone']);
+		add_post_meta($postId, 'email', $_POST['email']);
+		add_post_meta($postId, 'phone_group', $_POST['phone_group']);
+		add_post_meta($postId, 'thoi_gian', $_POST['thoi_gian']);
+		add_post_meta($postId, 'khoa_hoc', $_POST['khoa_hoc']);
+		echo json_encode(array(
+			'status' => 1
+			));
+	}
+	exit;
+}
+
+add_action( 'wp_ajax_register_course', 'register_course_ajax' );
+add_action( 'wp_ajax_nopriv_register_course', 'register_course_ajax' );
 

@@ -13,7 +13,7 @@
 <section class="page">
 	<div class="container">
 		<div class="page-title">
-			<h1>Tin tức<span></span></h1>
+			<h1>Blog<span></span></h1>
 		</div><!--Page Title-->
 	</div>	
 	<div class="container">
@@ -34,7 +34,10 @@
 			?>
 			<div class="blog-post">
 				<h2><a href="<?php the_permalink()?>" title=""><?php the_title(); ?></a></h2>
-				<a class="blog-post-img" href="single-post-image.html" title=""><img src="<?php echo THEME_URL . '/'?>images/blog-post-ws-1.jpg" alt="" /></a>
+				<?php 
+					$thumbnailImageUrl = ( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) )!= '' ) ? wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ): THEME_URL . '/images/blog-post-ws-1.jpg';
+				?>
+				<a class="blog-post-img-new" href="<?php the_permalink()?>" title=""><div class="image-post-div" style="background-image: url('<?php echo $thumbnailImageUrl;?>');"> </div></a>
 				<div class="blog-post-details">
 					<ul class="post-meta">
 						<li><i class="icon-calendar-empty"></i><?php echo $post->post_date;?></li>
@@ -63,12 +66,12 @@
 		</div>
 		
 		<div class="sidebar three-column pull-right">
-			<div class="sidebar-widget">
+			<!-- <div class="sidebar-widget">
 				<div class="sidebar-search">
 					<input class="search" type="text" placeholder="Nhập từ khóa tìm kiếm" />
 					<input class="search-button" type="submit" value="" />
 				</div>
-			</div><!-- Sidebar Search -->
+			</div>
 			<div class="sidebar-widget">
 				<div class="sidebar-title">
 					<h4>Chủ đề</h4>
@@ -80,7 +83,7 @@
 					<li><a href="#" title="">Bài học</a></li>
 					<li><a href="#" title="">Hoạt động</a></li>
 				</ul>
-			</div><!-- Category List -->
+			</div>
 			<div class="sidebar-widget">
 				<div class="sidebar-title">
 					<h4>Bài viết xem nhiều nhất</h4>
@@ -100,8 +103,11 @@
 					</div>
 				</div>
 
-			</div><!-- Popular Posts -->		
-		</div><!-- Sidebar -->
+			</div>	 -->
+			<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+				<?php dynamic_sidebar( 'main-sidebar' ); ?>
+			<?php endif; ?>
+		</div>
 	</div>
 		
 </section>

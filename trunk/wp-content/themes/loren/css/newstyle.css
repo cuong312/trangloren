@@ -1,3 +1,13 @@
+.blur-loading::after {
+    background: rgba(255, 255, 255, 0.45) url("../images/ajax-loader.gif") no-repeat scroll center center;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
 .about-icon {
     font-size: 60px;
     color: #1dbb90;
@@ -296,6 +306,22 @@
 
 .blog-post {
     padding-bottom: 5px;
+    width: 100%;
+}
+
+.image-post-div {
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.blog-post-img-new {
+    border-radius: 3px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 img.alignright {float:right; margin:0 0 1em 1em}
 img.alignleft {float:left; margin:0 1em 1em 0}
