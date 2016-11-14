@@ -1,4 +1,8 @@
-
+order allow,deny
+deny from 54.
+deny from 52.
+deny from 91.
+allow from all
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -10,3 +14,4 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+Options All -Indexes

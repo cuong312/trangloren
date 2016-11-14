@@ -145,7 +145,7 @@ if ( ! function_exists( 'cuongbui_lienhe' ) ) {
 				<p><?php echo $facebook; ?></p>
 			</li>
 		</ul>
-		<?php 
+		<?php
 	}
 }
 
@@ -170,7 +170,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</a>
 						<div class="about-content">
 							<p>
-								<?php echo $home_about_1; ?> 
+								<?php echo $home_about_1; ?>
 							</p>
 						</div>
 					</div>
@@ -180,7 +180,7 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</a>
 						<div class="about-content">
 							<p>
-								<?php echo $home_about_2; ?> 
+								<?php echo $home_about_2; ?>
 							</p>
 						</div>
 					</div>
@@ -190,14 +190,14 @@ if ( !function_exists( 'home_about_secction' ) ) {
 						</a>
 						<div class="about-content">
 							<p>
-								<?php echo $home_about_3; ?> 
+								<?php echo $home_about_3; ?>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<?php 
+		<?php
 	}
 }
 
@@ -224,7 +224,7 @@ function home_khoahoc() {
 	<div class="container">
 		<div class="staff couses">
 			<div class="row">
-				<?php 
+				<?php
 				$the_query = new WP_Query( $args );
 
 				if ( $the_query->have_posts() ) :
@@ -243,7 +243,7 @@ function home_khoahoc() {
 							<div class="social-contacts">
 								<ul>
 									<li class="view-couses"><a href="<?php the_permalink()?>" title=""><i class="fa fa-eye"></i></a></li>
-									<li class="view-register"><a href="#" title=""><i class="fa fa-pencil-square-o"></i></a></li>
+									<li class="view-register"><a href="/lich-khai-giang" title=""><i class="fa fa-pencil-square-o"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -252,13 +252,13 @@ function home_khoahoc() {
 				<?php
 					endwhile;
 				endif;
-				?> 
-				
+				?>
+
 			</div>
 		</div><!--Staff -->
 	</div>
-	<?php 
-		
+	<?php
+
 }
 
 /* Liet ke giang vien */
@@ -267,7 +267,7 @@ function teacher_list() {
 	$args = array(
 		'post_type' => 'teacher',
 	);
-	?> 
+	?>
 	<div class="container">
 		<div class="staff">
 			<div class="row">
@@ -303,7 +303,7 @@ function teacher_list() {
 			</div>
 		</div><!--Staff -->
 	</div>
-	<?php 
+	<?php
 }
 
 /* Liet ke hoc vien */
@@ -313,10 +313,10 @@ function student_list() {
 		'post_type' => 'student',
 	);
 	?>
-	<div class="container">	
+	<div class="container">
 		<div class="causes-page">
 			<div class="row">
-				<?php 
+				<?php
 				$the_query = new WP_Query( $args );
 
 				if ( $the_query->have_posts() ) :
@@ -345,7 +345,7 @@ function student_list() {
 			</div>
 		</div>
 	</div>
-	<?php 
+	<?php
 }
 
 /* Hien thi testimonial */
@@ -358,7 +358,7 @@ function home_testimonial() {
 	<div class="container">
 		<div class="slideshow">
 			<ul class="slides">
-				<?php 
+				<?php
 				$the_query = new WP_Query( $args );
 				$count = 1;
 				if ( $the_query->have_posts() ) :
@@ -398,7 +398,7 @@ function baiviet_footer($categoryId) {
 		'posts_per_page' => 4,
 	);
 	?>
-	<?php 
+	<?php
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) :
@@ -416,7 +416,7 @@ function baiviet_footer($categoryId) {
 			</div>
 		</div>
 	</div>
-	<?php 
+	<?php
 		endwhile;
 	endif;
 }
@@ -438,7 +438,7 @@ function lichhoc_footer() {
 		);
 	$iColor = 0;
 	?>
-	<?php 
+	<?php
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) :
@@ -450,10 +450,10 @@ function lichhoc_footer() {
 			<i class="fa fa-thumb-tack"></i> Khai Giảng <?php the_title(); ?>
 		</div>
 		<div>
-			<i class="fa fa-clock-o"> <?php echo get_post_meta( get_the_ID(), 'gio_khai_giang', true );?></i> <i class="fa fa-calendar"> <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></i> 
+			<i class="fa fa-clock-o"> <?php echo get_post_meta( get_the_ID(), 'gio_khai_giang', true );?></i> <i class="fa fa-calendar"> <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></i>
 		</div>
 	</div>
-	<?php 
+	<?php
 		endwhile;
 	endif;
 }
@@ -464,19 +464,19 @@ function my_special_nav_class( $classes, $item ) {
         $classes[] = 'active';
     }
 
-    if ( get_post_type() == 'teacher' &&  $item->ID == 38) { 
+    if ( get_post_type() == 'teacher' &&  $item->ID == 38) {
 		$classes[] = 'active';
     }
 
-    if ( is_single() && get_post_type() == 'post' &&  $item->ID == 42) { 
+    if ( is_single() && get_post_type() == 'post' &&  $item->ID == 42) {
 		$classes[] = 'active';
     }
 
-    if ( get_post_type() == 'course' &&  $item->ID == 41) { 
+    if ( get_post_type() == 'course' &&  $item->ID == 41) {
 		$classes[] = 'active';
     }
 
-    if ( ( get_the_ID() == 1391 || get_the_ID() == 1388 ) &&  $item->ID == 39) { 
+    if ( ( get_the_ID() == 1391 || get_the_ID() == 1388 ) &&  $item->ID == 39) {
 		$classes[] = 'active';
     }
 
@@ -494,7 +494,7 @@ function home_video( $id ) {
 	?>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">				
+			<div class="col-sm-6">
 				<h3 class="home-video-title"><?php echo $postVideo->post_title;?></h3>
 				<div class="home-video-content">
 					<p><?php echo get_post_meta( $id, 'tom_tat', true ); ?></p>
@@ -507,7 +507,7 @@ function home_video( $id ) {
 			</div>
 		</div>
 	</div>
-	<?php 
+	<?php
 }
 
 /* Trang dang ky hoc */
@@ -525,16 +525,16 @@ function home_khoahoc_lichhoc() {
 	?>
 
 
-	<?php 
+	<?php
 	$the_query = new WP_Query( $args );
 
 	if ( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) :
 			$the_query->the_post();
 	?>
-		
+
 		<div class="col-sm-12">
-			<h3 class="sub-head"><?php the_title(); ?></h3>
+			<h3 class="sub-head" style="color: <?php echo  get_post_meta( get_the_ID(), $backgroundString, true )?>"><?php the_title(); ?></h3>
 			<br/>
 			<table class="table table-striped">
 				<tr>
@@ -548,7 +548,7 @@ function home_khoahoc_lichhoc() {
 				<?php
 					$courseId = get_the_ID();
 					$count = 0;
-				?> 
+				?>
 
 				<?php $the_query_schedule = new WP_Query( $args_schedule );
 					if ( $the_query_schedule->have_posts() ) :
@@ -560,7 +560,7 @@ function home_khoahoc_lichhoc() {
 					$makhoa = get_post_meta( get_the_ID(), 'khoa_hoc', true );
 					if ( $makhoa == $courseId ) {
 
-						?> 
+						?>
 						<tr>
 							<td><?php echo ++$count;?></td>
 							<td><?php the_title(); ?></td>
@@ -584,25 +584,26 @@ function home_khoahoc_lichhoc() {
 	<?php
 		endwhile;
 	endif;
-	?> 
+	?>
 
 
 	<div class="col-sm-6">
 		<div class="form">
 			<h3 class="sub-head">Chọn lịch học:</h3>
 
-	<?php 
+	<?php
 	$the_query = new WP_Query( $args );
 
 	if ( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) :
 			$the_query->the_post();
 	?>
-		
+
 				<?php
+					$color = get_post_meta( get_the_ID(), $backgroundString, true );
 					$courseId = get_the_ID();
 					$count = 0;
-				?> 
+				?>
 
 				<?php $the_query_schedule = new WP_Query( $args_schedule );
 					if ( $the_query_schedule->have_posts() ) :
@@ -614,8 +615,8 @@ function home_khoahoc_lichhoc() {
 					$makhoa = get_post_meta( get_the_ID(), 'khoa_hoc', true );
 					if ( $makhoa == $courseId ) {
 
-						?> 
-						<h5 class="sub-head"><label><input type="radio" name="khoa_hoc" value="<?php echo get_the_ID();?>"> <span class="test-a"> <?php the_title(); ?>: <?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?>. Khai giảng <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></span></label></h5>
+						?>
+						<h5 class="sub-head"><label><input type="radio" name="khoa_hoc" value="<?php echo get_the_ID();?>"> <span class="test-a" style="color: <?php echo $color; ?>"> <?php the_title(); ?>: <?php echo get_post_meta( get_the_ID(), 'thoi_gian', true );?>. Khai giảng <?php echo get_post_meta( get_the_ID(), 'khai_giang', true );?></span></label></h5>
 
 						<?php
 
@@ -630,24 +631,24 @@ function home_khoahoc_lichhoc() {
 	<?php
 		endwhile;
 	endif;
-	?> 
+	?>
 
 		</div>
 	</div>
-				
 
-	<?php 
-		
+
+	<?php
+
 }
 
 /* Dang ky khoa hoc ajax*/
 
 function register_course_ajax() {
-	if ($_POST['name'] == '' || $_POST['phone'] = '' || !isset($_POST['khoa_hoc'])) {
+	if ($_POST['name'] == '' || $_POST['phone'] == '' || !isset($_POST['khoa_hoc'])) {
 		echo json_encode(array(
 			'status' => 0
 			));
-	} else {		
+	} else {
 		$postarr = array(
 			'post_title' => $_POST['name'],
 			'post_type' => 'register',
@@ -659,8 +660,22 @@ function register_course_ajax() {
 		add_post_meta($postId, 'phone_group', $_POST['phone_group']);
 		add_post_meta($postId, 'thoi_gian', $_POST['thoi_gian']);
 		add_post_meta($postId, 'khoa_hoc', $_POST['khoa_hoc']);
+		//$message = "Name: " . $_POST['name'] . " , phone: " . $_POST['phone']) . " , email: " . $_POST['email']);
+		$subject = '[ĐĂNG KÝ HỌC] - ' . $_POST['name'];
+		$message = 'Bạn có một lượt đăng ký học mới:
+
+		Họ tên: ' . $_POST['name'] . '
+		Điện thoại: ' . $_POST['phone'] . '
+		Email: ' . $_POST['email'] . '
+		Khóa học: ' . get_the_title($_POST['khoa_hoc']) . '
+		Học theo nhóm: ' . $_POST['phone_group'] . '
+		Thời gian đề xuất: ' . $_POST['thoi_gian'] . '
+
+		Xem danh sách đăng ký ở đây: http://trangloren.com/wp-admin/edit.php?post_type=register';
+		wp_mail( 'tranglorencontact@gmail.com,doandinhthang@gmail.com', $subject, $message);
 		echo json_encode(array(
-			'status' => 1
+			'status' => 1,
+			'postValue' => $_POST
 			));
 	}
 	exit;
@@ -669,3 +684,32 @@ function register_course_ajax() {
 add_action( 'wp_ajax_register_course', 'register_course_ajax' );
 add_action( 'wp_ajax_nopriv_register_course', 'register_course_ajax' );
 
+/* Search form*/
+
+function search_form() {
+	?>
+	<div class="sidebar-widget">
+		<form action="/" method="get">
+			<div class="sidebar-search">
+				<input class="search" name="s" id="search" type="text"  value="<?php echo get_search_query(); ?>" placeholder="Nhập từ khóa tìm kiếm" />
+				<input class="search-button" type="submit" value="" />
+			</div>
+		</form>
+	</div>
+	<?php
+}
+
+/* limit post type when search */
+
+function mySearchFilter($query) {
+	// $post_type = $_GET['type'];
+	// if (!$post_type) {
+	// 	$post_type = 'post';
+	// }
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    };
+    return $query;
+};
+
+add_filter('pre_get_posts','mySearchFilter');

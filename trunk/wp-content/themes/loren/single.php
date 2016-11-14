@@ -7,7 +7,7 @@
 <section class="page">
 	<div class="container">
 		<div class="page-title">
-			<h1>Tin tức<span></span></h1>
+			<h1>Blog<span></span></h1>
 		</div><!--Page Title-->
 	</div>	
 	<div class="container">
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 			</div>
-			<div>
+			<div class="page-content">
 				<?php echo the_content(); ?>
 			</div>
 			<?php
@@ -44,47 +44,12 @@
 			</div>
 			
 		</div>
-		
 		<div class="sidebar three-column pull-right">
-			<div class="sidebar-widget">
-				<div class="sidebar-search">
-					<input class="search" type="text" placeholder="Nhập từ khóa tìm kiếm" />
-					<input class="search-button" type="submit" value="" />
-				</div>
-			</div><!-- Sidebar Search -->
-			<div class="sidebar-widget">
-				<div class="sidebar-title">
-					<h4>Chủ đề</h4>
-				</div>
-				<ul class="sidebar-list">
-					<li><a href="#" title="">Khóa học</a></li>
-					<li><a href="#" title="">Giảng viên</a></li>
-					<li><a href="#" title="">Học viên</a></li>
-					<li><a href="#" title="">Bài học</a></li>
-					<li><a href="#" title="">Hoạt động</a></li>
-				</ul>
-			</div><!-- Category List -->
-			<div class="sidebar-widget">
-				<div class="sidebar-title">
-					<h4>Bài viết xem nhiều nhất</h4>
-				</div>
-				<div class="popular-post">
-					<img src="<?php echo THEME_URL . '/'?>images/popular-post1.jpg" alt="" />
-					<div class="popular-post-title">
-						<h6><a href="#" title="">Quisque Sit Amet Unte</a></h6>
-						<span>May 3,2013 / 02 comments</span>
-					</div>
-				</div>
-				<div class="popular-post">
-					<img src="<?php echo THEME_URL . '/'?>images/popular-post2.jpg" alt="" />
-					<div class="popular-post-title">
-						<h6><a href="#" title="">Quisque Sit Amet Unte</a></h6>
-						<span>May 3,2013 / 02 comments</span>
-					</div>
-				</div>
-
-			</div><!-- Popular Posts -->		
-		</div><!-- Sidebar -->
+			<?php search_form(); ?>
+			<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+				<?php dynamic_sidebar( 'main-sidebar' ); ?>
+			<?php endif; ?>
+		</div>
 	</div>
 		
 </section>

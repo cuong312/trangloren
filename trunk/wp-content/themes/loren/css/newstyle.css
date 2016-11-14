@@ -316,6 +316,10 @@
     width: 100%;
 }
 
+.search {
+    color: #4A4848 !important;
+}
+
 .blog-post-img-new {
     border-radius: 3px;
     float: left;
@@ -375,6 +379,11 @@ h5.sub-head {
 
 .page-title h1 {
     z-index: 3;
+}
+
+.page-content img {
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width: 767px) {

@@ -66,6 +66,7 @@
 		</div>
 		
 		<div class="sidebar three-column pull-right">
+			<?php search_form(); ?>
 			<!-- <div class="sidebar-widget">
 				<div class="sidebar-search">
 					<input class="search" type="text" placeholder="Nhập từ khóa tìm kiếm" />
