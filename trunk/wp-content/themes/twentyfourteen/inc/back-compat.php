@@ -1,4 +1,4 @@
-<?php
+<?php  ?><?php
 /**
  * Twenty Fourteen back compat functionality
  *
